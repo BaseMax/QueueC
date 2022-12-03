@@ -61,8 +61,7 @@ bool isFull(Queue* queue)
  */
 void enqueue(Queue* queue, int element)
 {
-    if (isFull(queue))
-{
+    if (isFull(queue)) {
         printf("Queue is full!\n");
         return;
     }
@@ -78,8 +77,7 @@ void enqueue(Queue* queue, int element)
  */
 int dequeue(Queue* queue)
 {
-    if (isEmpty(queue))
-{
+    if (isEmpty(queue)) {
         printf("Queue is empty!\n");
         return -1;
     }
@@ -96,8 +94,7 @@ int dequeue(Queue* queue)
  */
 int getFront(Queue* queue)
 {
-    if (isEmpty(queue))
-{
+    if (isEmpty(queue)) {
         printf("Queue is empty!\n");
         return -1;
     }
@@ -111,8 +108,7 @@ int getFront(Queue* queue)
  */
 int getRear(Queue* queue)
 {
-    if (isEmpty(queue))
-{
+    if (isEmpty(queue)) {
         printf("Queue is empty!\n");
         return -1;
     }
