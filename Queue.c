@@ -62,7 +62,7 @@ bool isEmpty(Queue* queue)
  */
 bool isFull(Queue* queue)
 {
-    return queue->count == queue->size;
+    return queue->count >= queue->size;
 }
 
 /**
