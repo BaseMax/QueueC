@@ -71,6 +71,13 @@ int getFront(Queue* queue);
 int getRear(Queue* queue);
 
 /**
+ * @brief Print the queue
+ * @param queue 
+ * @return char*
+ */
+char* printQueue(Queue* queue);
+
+/**
  * @brief Get the Size object
  * @param queue 
  * @return int 
@@ -78,4 +85,3 @@ int getRear(Queue* queue);
 int getSize(Queue* queue);
 
 #endif
-

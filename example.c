@@ -18,10 +18,29 @@ int main(int argc, char** argv)
 
     // Enqueue elements
     enqueue(queue, 1);
+
+    // Print the front
+    printf("Front: %d\n", getFront(queue));
+
     enqueue(queue, 2);
+
+    // Print the front
+    printf("Front: %d\n", getFront(queue));
+
     enqueue(queue, 3);
+
+    // Print the front
+    printf("Front: %d\n", getFront(queue));
+
     enqueue(queue, 4);
+
+    // Print the front
+    printf("Front: %d\n", getFront(queue));
+
     enqueue(queue, 5);
+
+    // Print the front
+    printf("Front: %d\n", getFront(queue));
 
     // Check if the queue is full
     if (isFull(queue)) {
@@ -34,6 +53,9 @@ int main(int argc, char** argv)
     printf("Dequeue: %d\n", dequeue(queue));
     printf("Dequeue: %d\n", dequeue(queue));
     printf("Dequeue: %d\n", dequeue(queue));
+
+    // Print the queue
+    printQueue(queue);
 
     // Get the front element
     printf("Front: %d\n", getFront(queue));

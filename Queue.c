@@ -113,6 +113,25 @@ int getFront(Queue* queue)
 }
 
 /**
+ * @brief Print the queue
+ * @param queue 
+ * @return char*
+ */
+char* printQueue(Queue* queue)
+{
+    if (isEmpty(queue)) {
+        printf("Queue is empty!\n");
+        return NULL;
+    }
+    char* str = (char*)malloc(sizeof(char) * 100);
+    int rear = (queue->front + queue->count) % queue->size;
+    for (int i = queue->front; i < rear; i++) {
+        sprintf(str, "%s%d ", str, queue->data[i]);
+    }
+    return str;
+}
+
+/**
  * @brief Get the Rear object
  * @param queue 
  * @return int 
