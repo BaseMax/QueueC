@@ -76,8 +76,7 @@ void enqueue(Queue* queue, int element)
         printf("Queue is full!\n");
         return;
     }
-    int rear = (queue->front + queue->count) % queue->size;
-    queue->data[rear] = element;
+    queue->data[queue->count] = element;
     queue->count++;
 }
 
@@ -93,8 +92,7 @@ int dequeue(Queue* queue)
         return -1;
     }
     int element = queue->data[queue->front];
-    queue->front = (queue->front + 1) % queue->size;
-    queue->count--;
+    queue->front++;
     return element;
 }
 
@@ -142,8 +140,7 @@ int getRear(Queue* queue)
         printf("Queue is empty!\n");
         return -1;
     }
-    int rear = (queue->front + queue->count - 1) % queue->size;
-    return queue->data[rear];
+    return queue->data[queue->count - 1];
 }
 
 /**
@@ -153,5 +150,5 @@ int getRear(Queue* queue)
  */
 int getSize(Queue* queue)
 {
-    return queue->count;
+    return queue->count - queue->front;
 }
